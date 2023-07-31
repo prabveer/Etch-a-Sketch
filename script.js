@@ -9,5 +9,12 @@ function start(num)
         gridDiv.appendChild(content);
     }
 }
+start(defaultgrid);
 
-window.addEventListener('load', start(defaultgrid));
+const divBoxSelector = document.querySelectorAll("div.box");
+divBoxSelector.forEach((divsOnGrid) => {
+    divsOnGrid.addEventListener('mouseover' , () => {
+        divsOnGrid.classList.add('box-Colored');
+    });
+});
+

@@ -1,8 +1,12 @@
 .grid-container {
     display: grid;
+    width: 1px;
+    height: 1px;
 }
 .box {
-    background-color: white;
     border: .5px solid black;
     padding: 5px;
 }
+.box-Colored{
+    background-color: black;
+} 
