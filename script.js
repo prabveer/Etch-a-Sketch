@@ -1,6 +1,7 @@
 let gridSize = 16;
 var slider = document.getElementById("myRange");
 var output = document.getElementById("gridValue");
+
 function start(num)
 {
     const gridDiv = document.querySelector(".grid-container");
@@ -31,10 +32,11 @@ function clear() {
         divsOnGrid.remove();
     }); 
 }
-output.innerHTML = slider.value; // Display the default slider value
+//output.innerHTML = slider.value; // Display the default slider value
+
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
-  output.innerHTML = this.value;
+  output.innerHTML = this.value + "x" + this.value;
   clear();
   gridSize = this.value;
   start(gridSize);
