@@ -8,6 +8,16 @@
 </head>
 <body>
     <h1>Etch-a-sketch</h1>
+    <div class = "Buttons">
+        <button class= "reset" onclick= "resetHit()">Reset</button>
+        <div>Grid Size:</div>
+        <div class= "setGrid">
+            <div class = "gridSize" id= "gridValue">16</div>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="16" class="slider" id="myRange">
+            </div>
+        </div>
+    </div>
     <div class = "grid-container" style = "grid-template-columns: repeat(16,1fr); grid-template-rows: repeat(16,1fr);">
 
     </div>

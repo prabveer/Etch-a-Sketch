@@ -1,4 +1,6 @@
-let defaultgrid = 16;
+let gridSize = 16;
+var slider = document.getElementById("myRange");
+var output = document.getElementById("gridValue");
 function start(num)
 {
     const gridDiv = document.querySelector(".grid-container");
@@ -8,13 +10,29 @@ function start(num)
         content.classList.add('box');
         gridDiv.appendChild(content);
     }
-}
-start(defaultgrid);
-
-const divBoxSelector = document.querySelectorAll("div.box");
-divBoxSelector.forEach((divsOnGrid) => {
-    divsOnGrid.addEventListener('mouseover' , () => {
-        divsOnGrid.classList.add('box-Colored');
+    const divBoxSelector = document.querySelectorAll("div.box");
+    divBoxSelector.forEach((divsOnGrid) => {
+        divsOnGrid.addEventListener('mouseover' , () => {
+            divsOnGrid.classList.add('box-Colored');
+        });
     });
-});
-
+}
+start(gridSize);
+function resetHit() {
+    const divBoxSelector = document.querySelectorAll("div.box");
+    divBoxSelector.forEach((divsOnGrid) => {
+        divsOnGrid.classList.remove('box-Colored');
+    }); 
+}
+function clear() {
+    const divBoxSelector = document.querySelectorAll("div.box");
+    divBoxSelector.forEach((divsOnGrid) => {
+        divsOnGrid.remove();
+    }); 
+}
+output.innerHTML = slider.value; // Display the default slider value
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+  //start(gridSize);
+}

@@ -1,7 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .grid-container {
     display: grid;
     width: 1px;
     height: 1px;
+    justify-content: center;
+}
+.Buttons{
+    display: flex;
+    margin: 15px;
+    gap: 20px;
+}
+.reset{
+    height: 30px;
 }
 .box {
     border: .5px solid black;
@@ -10,3 +25,9 @@
 .box-Colored{
     background-color: black;
 } 
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
