@@ -6,8 +6,8 @@ body {
 }
 .grid-container {
     display: inline-grid;
-    width: 250px;
-    height: 250px;
+    width: 650px;
+    height: 650px;
     justify-content: center;
 }
 .Buttons{
